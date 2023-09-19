@@ -1,0 +1,5 @@
+*.db
+*.xls*
+.idea
+__pycache__
+*.sqbpro
