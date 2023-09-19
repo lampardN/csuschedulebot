@@ -3,3 +3,7 @@
 .idea
 __pycache__
 *.sqbpro
+*.pdf
+*.doc*
+test.py
+.bat
