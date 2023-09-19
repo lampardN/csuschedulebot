@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>CsuTimetableBot.Registration.Registration API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>CsuTimetableBot.Registration.Registration</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from aiogram.dispatcher import FSMContext
+from aiogram.dispatcher.filters.state import State, StatesGroup
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram import types, Dispatcher
+from aiogram.dispatcher.filters import Text
+
+from DBController import DBController
+
+
+class FSMLogin(StatesGroup):
+    &#34;&#34;&#34;Класс состояний комманды регистрации преподавателей&#34;&#34;&#34;
+    start = State()
+    login = State()
+
+&#39;&#39;&#39;Клавиатура регистрации&#39;&#39;&#39;
+login_markup = InlineKeyboardMarkup(row_width=1)
+user_btn = InlineKeyboardButton(text=&#34;Войти как преподаватель&#34;, callback_data=&#39;Users&#39;)
+admin_btn = InlineKeyboardButton(text=&#34;Войти как администратор&#34;, callback_data=&#39;Admins&#39;)
+login_markup.add(user_btn, admin_btn)
+
+async def start(message: types.Message) -&gt; None:
+    await FSMLogin.start.set()
+    await message.answer(text=&#39;Выберете тип входа\nПри ошибке введите &#34;отмена&#34;&#39;,reply_markup=login_markup)
+    await message.delete()
+
+async def cancel(message: types.Message, state: FSMContext) -&gt; None:
+    cur_state = await state.get_state()
+    if cur_state is None:
+        return
+    await state.finish()
+    await message.answer(&#34;Перевожу на начало регистрации&#34;)
+    await FSMLogin.start.set()
+    await message.answer(text=&#39;Выберете тип входа\nПри ошибке введите &#34;отмена&#39;, reply_markup=login_markup)
+
+async def login_start(callback_data : types.CallbackQuery, state: FSMContext) -&gt; None:
+    &#34;&#34;&#34;Функция перевода на ожидание ответа от пользователя для входа&#34;&#34;&#34;
+    async with state.proxy() as data:
+        data[&#39;msg&#39;] = callback_data.data
+    await callback_data.message.answer(&#39;Введите логин и пароль через пробел&#39;)
+    await FSMLogin.next()
+
+async def login_end(message : types.Message, state : FSMContext) -&gt; None:
+    &#34;&#34;&#34;Функция получения логина и пароля от пользователя&#34;&#34;&#34;
+    newUser = {&#34;Login&#34;: (message.text.split(&#39; &#39;))[0], &#34;Password&#34;: (message.text.split(&#39; &#39;))[1]}
+    async with state.proxy() as data:
+        users = DBController().getNoneAuthUsers() if data[&#39;msg&#39;] == &#39;Users&#39; else DBController().getAdmins()
+        newUser[&#39;Type&#39;] = data[&#39;msg&#39;]
+    status = 0
+    for user in users:
+        if newUser[&#34;Login&#34;] == user[&#34;Login&#34;] and newUser[&#34;Password&#34;] == user[&#34;Password&#34;]:
+            status = 1
+            newUser[&#39;ID&#39;] = message.chat.id
+            newUser[&#39;Auth&#39;] = 1
+            DBController().setID(newUser)
+            DBController().setAuth(newUser)
+            await message.answer(f&#39;Вы вошли как {user[&#34;Name&#34;]}&#39;)
+    if not status:
+        await message.answer(&#39;Неправильно введён логин или пароль, попробуйте снова&#39;)
+        return
+    await state.finish()
+
+async def stop(message: types.Message):
+    chatID = message.chat.id
+    user = DBController().getEntryByID(chatID)
+    user[&#39;Auth&#39;] = 0
+    user[&#39;ID&#39;] = None
+    DBController().setAuth(user)
+    DBController().setID(user)
+    await message.answer(&#39;Вы успешно прервали работу бота и были отключены от рассылки\nДля возобнавления работы введите /start&#39;)
+    await message.delete()
+
+
+def Registration_handlers(dp: Dispatcher):
+    dp.register_message_handler(start, commands=[&#39;start&#39;], state=None)
+    dp.register_message_handler(cancel, state=&#34;*&#34;, commands=&#34;отмена&#34;)
+    dp.register_message_handler(cancel, Text(equals=&#34;отмена&#34;, ignore_case=True), state=&#34;*&#34;)
+    dp.register_callback_query_handler(login_start, text=[&#39;Users&#39;, &#39;Admins&#39;], state=FSMLogin.start)
+    dp.register_message_handler(login_end, state=FSMLogin.login)
+    dp.register_message_handler(stop, commands=[&#39;stop&#39;])</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="CsuTimetableBot.Registration.Registration.Registration_handlers"><code class="name flex">
+<span>def <span class="ident">Registration_handlers</span></span>(<span>dp: aiogram.dispatcher.dispatcher.Dispatcher)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def Registration_handlers(dp: Dispatcher):
+    dp.register_message_handler(start, commands=[&#39;start&#39;], state=None)
+    dp.register_message_handler(cancel, state=&#34;*&#34;, commands=&#34;отмена&#34;)
+    dp.register_message_handler(cancel, Text(equals=&#34;отмена&#34;, ignore_case=True), state=&#34;*&#34;)
+    dp.register_callback_query_handler(login_start, text=[&#39;Users&#39;, &#39;Admins&#39;], state=FSMLogin.start)
+    dp.register_message_handler(login_end, state=FSMLogin.login)
+    dp.register_message_handler(stop, commands=[&#39;stop&#39;])</code></pre>
+</details>
+</dd>
+<dt id="CsuTimetableBot.Registration.Registration.cancel"><code class="name flex">
+<span>async def <span class="ident">cancel</span></span>(<span>message: aiogram.types.message.Message, state: aiogram.dispatcher.storage.FSMContext) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def cancel(message: types.Message, state: FSMContext) -&gt; None:
+    cur_state = await state.get_state()
+    if cur_state is None:
+        return
+    await state.finish()
+    await message.answer(&#34;Перевожу на начало регистрации&#34;)
+    await FSMLogin.start.set()
+    await message.answer(text=&#39;Выберете тип входа\nПри ошибке введите &#34;отмена&#39;, reply_markup=login_markup)</code></pre>
+</details>
+</dd>
+<dt id="CsuTimetableBot.Registration.Registration.login_end"><code class="name flex">
+<span>async def <span class="ident">login_end</span></span>(<span>message: aiogram.types.message.Message, state: aiogram.dispatcher.storage.FSMContext) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Функция получения логина и пароля от пользователя</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def login_end(message : types.Message, state : FSMContext) -&gt; None:
+    &#34;&#34;&#34;Функция получения логина и пароля от пользователя&#34;&#34;&#34;
+    newUser = {&#34;Login&#34;: (message.text.split(&#39; &#39;))[0], &#34;Password&#34;: (message.text.split(&#39; &#39;))[1]}
+    async with state.proxy() as data:
+        users = DBController().getNoneAuthUsers() if data[&#39;msg&#39;] == &#39;Users&#39; else DBController().getAdmins()
+        newUser[&#39;Type&#39;] = data[&#39;msg&#39;]
+    status = 0
+    for user in users:
+        if newUser[&#34;Login&#34;] == user[&#34;Login&#34;] and newUser[&#34;Password&#34;] == user[&#34;Password&#34;]:
+            status = 1
+            newUser[&#39;ID&#39;] = message.chat.id
+            newUser[&#39;Auth&#39;] = 1
+            DBController().setID(newUser)
+            DBController().setAuth(newUser)
+            await message.answer(f&#39;Вы вошли как {user[&#34;Name&#34;]}&#39;)
+    if not status:
+        await message.answer(&#39;Неправильно введён логин или пароль, попробуйте снова&#39;)
+        return
+    await state.finish()</code></pre>
+</details>
+</dd>
+<dt id="CsuTimetableBot.Registration.Registration.login_start"><code class="name flex">
+<span>async def <span class="ident">login_start</span></span>(<span>callback_data: aiogram.types.callback_query.CallbackQuery, state: aiogram.dispatcher.storage.FSMContext) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Функция перевода на ожидание ответа от пользователя для входа</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def login_start(callback_data : types.CallbackQuery, state: FSMContext) -&gt; None:
+    &#34;&#34;&#34;Функция перевода на ожидание ответа от пользователя для входа&#34;&#34;&#34;
+    async with state.proxy() as data:
+        data[&#39;msg&#39;] = callback_data.data
+    await callback_data.message.answer(&#39;Введите логин и пароль через пробел&#39;)
+    await FSMLogin.next()</code></pre>
+</details>
+</dd>
+<dt id="CsuTimetableBot.Registration.Registration.start"><code class="name flex">
+<span>async def <span class="ident">start</span></span>(<span>message: aiogram.types.message.Message) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def start(message: types.Message) -&gt; None:
+    await FSMLogin.start.set()
+    await message.answer(text=&#39;Выберете тип входа\nПри ошибке введите &#34;отмена&#34;&#39;,reply_markup=login_markup)
+    await message.delete()</code></pre>
+</details>
+</dd>
+<dt id="CsuTimetableBot.Registration.Registration.stop"><code class="name flex">
+<span>async def <span class="ident">stop</span></span>(<span>message: aiogram.types.message.Message)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">async def stop(message: types.Message):
+    chatID = message.chat.id
+    user = DBController().getEntryByID(chatID)
+    user[&#39;Auth&#39;] = 0
+    user[&#39;ID&#39;] = None
+    DBController().setAuth(user)
+    DBController().setID(user)
+    await message.answer(&#39;Вы успешно прервали работу бота и были отключены от рассылки\nДля возобнавления работы введите /start&#39;)
+    await message.delete()</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="CsuTimetableBot.Registration.Registration.FSMLogin"><code class="flex name class">
+<span>class <span class="ident">FSMLogin</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Класс состояний комманды регистрации преподавателей</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FSMLogin(StatesGroup):
+    &#34;&#34;&#34;Класс состояний комманды регистрации преподавателей&#34;&#34;&#34;
+    start = State()
+    login = State()</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>aiogram.dispatcher.filters.state.StatesGroup</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="CsuTimetableBot.Registration.Registration.FSMLogin.login"><code class="name">var <span class="ident">login</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="CsuTimetableBot.Registration.Registration.FSMLogin.start"><code class="name">var <span class="ident">start</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="CsuTimetableBot.Registration" href="index.html">CsuTimetableBot.Registration</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="CsuTimetableBot.Registration.Registration.Registration_handlers" href="#CsuTimetableBot.Registration.Registration.Registration_handlers">Registration_handlers</a></code></li>
+<li><code><a title="CsuTimetableBot.Registration.Registration.cancel" href="#CsuTimetableBot.Registration.Registration.cancel">cancel</a></code></li>
+<li><code><a title="CsuTimetableBot.Registration.Registration.login_end" href="#CsuTimetableBot.Registration.Registration.login_end">login_end</a></code></li>
+<li><code><a title="CsuTimetableBot.Registration.Registration.login_start" href="#CsuTimetableBot.Registration.Registration.login_start">login_start</a></code></li>
+<li><code><a title="CsuTimetableBot.Registration.Registration.start" href="#CsuTimetableBot.Registration.Registration.start">start</a></code></li>
+<li><code><a title="CsuTimetableBot.Registration.Registration.stop" href="#CsuTimetableBot.Registration.Registration.stop">stop</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="CsuTimetableBot.Registration.Registration.FSMLogin" href="#CsuTimetableBot.Registration.Registration.FSMLogin">FSMLogin</a></code></h4>
+<ul class="">
+<li><code><a title="CsuTimetableBot.Registration.Registration.FSMLogin.login" href="#CsuTimetableBot.Registration.Registration.FSMLogin.login">login</a></code></li>
+<li><code><a title="CsuTimetableBot.Registration.Registration.FSMLogin.start" href="#CsuTimetableBot.Registration.Registration.FSMLogin.start">start</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
